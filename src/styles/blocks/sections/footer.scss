@@ -1,0 +1,77 @@
+.footer-section {
+  margin-top: 6rem;
+  background-color: $bg-inverse-transparent-10;
+  padding: 6rem 0;
+  @include mobile {
+    padding-top: 3rem;
+    padding-bottom: 6rem;
+  }
+  &__container {
+    row-gap: 8rem;
+  }
+  &__info-block {
+    &__info-point-block {
+      grid-column: span 2;
+      @include df_fdc;
+      gap: 4rem;
+      @include mobile {
+        gap: 6rem;
+      }
+      &__info-point {
+        @include df_fdc;
+        gap: 1.25rem;
+        @include mobile {
+          gap: 1.5rem;
+        }
+        &__name {
+          @include heading_3;
+          text-transform: uppercase;
+        }
+        &__add {
+          max-width: 35.75rem;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          @include mobile {
+            max-width: none;
+            width: 100%;
+          }
+        }
+      }
+    }
+    &__nav {
+      &__list {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        @include df_fdc;
+        gap: 1rem;
+        &__li {
+          &__link {
+            @include button_1;
+            font-weight: 600;
+          }
+        }
+      }
+    }
+    &__add {
+      @include df_fdc;
+      gap: 3rem;
+      &__text {
+        @include df_fdc;
+        gap: 0.75rem;
+        &.mobile {
+          grid-column: span 2;
+          @include mobile {
+            gap: 1.5rem;
+          }
+        }
+        &__link {
+          color: $text-accent-subdued-10;
+          @include button_1;
+          opacity: .4;
+        }
+      }
+    }
+  }
+}

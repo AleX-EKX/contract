@@ -1,0 +1,179 @@
+// Coloristics //
+
+// bg
+$bg-primary: #212121;
+$bg-inverse: #FAFAFA;
+$bg-accent: #C32B26;
+
+$bg-primary-subdued-5: #F4F4F4;
+$bg-primary-subdued-10: #E9E9E9;
+$bg-primary-subdued-20: #D3D3D3;
+$bg-primary-subdued-40: #A6A6A6;
+$bg-primary-transparent-40: #21212166;
+$bg-primary-subdued-60: #7A7A7A;
+
+$bg-inverse-transparent-5: #FAFAFA0D;
+$bg-inverse-transparent-10: #FAFAFA1A;
+$bg-inverse-transparent-20: #FAFAFA33;
+$bg-inverse-transparent-40: #FAFAFA66;
+$bg-inverse-transparent-60: #FAFAFA99;
+
+$bg-accent-subdued-10: #F0E1E1;
+$bg-accent-subdued-20: #EBCDCC;
+$bg-accent-subdued-40: #E1A4A2;
+$bg-accent-subdued-60: #D77C79;
+
+$bg-system-wrong: #9F3125;
+
+// text
+$text-primary: #FAFAFA;
+$text-inverse: #212121;
+$text-accent: #C32B26;
+
+$text-primary-transparent-10: #FAFAFA1A;
+$text-primary-transparent-20: #FAFAFA33;
+$text-primary-transparent-40: #FAFAFA66;
+$text-primary-transparent-60: #FAFAFA99;
+
+$text-inverse-subdued-10: #E9E9E9;
+$text-inverse-subdued-20: #D3D3D3;
+$text-inverse-subdued-40: #A6A6A6;
+$text-inverse-subdued-60: #7A7A7A;
+
+$text-accent-subdued-10: #F0E1E1;
+$text-accent-subdued-20: #EBCDCC;
+$text-accent-subdued-40: #E1A4A2;
+$text-accent-subdued-60: #D77C79;
+
+$text-system-wrong: #9F3125;
+
+// icon
+$icon-primary: #FAFAFA;
+$icon-inverse: #212121;
+$icon-accent: #C32B26;
+
+$icon-primary-subdued-10: #E9E9E9;
+$icon-primary-subdued-20: #D3D3D3;
+$icon-primary-subdued-40: #A6A6A6;
+$icon-primary-subdued-60: #7A7A7A;
+
+$icon-accent-subdued-10: #F0E1E1;
+$icon-accent-subdued-20: #EBCDCC;
+$icon-accent-subdued-40: #E1A4A2;
+$icon-accent-subdued-60: #D77C79;
+
+// border
+$border-primary: #212121;
+$border-inverse: #FAFAFA;
+$border-accent: #C32B26;
+
+$border-primary-subdued-10: #E9E9E9;
+$border-primary-subdued-20: #D3D3D3;
+$border-primary-subdued-40: #A6A6A6;
+$border-primary-subdued-60: #7A7A7A;
+
+$border-accent-subdued-10: #F0E1E1;
+$border-accent-subdued-20: #EBCDCC;
+$border-accent-subdued-40: #E1A4A2;
+$border-accent-subdued-60: #D77C79;
+
+$border-system-wrong: #9F3125;
+
+// Typography //
+
+@mixin heading_1{
+    font-size: 6rem;
+    font-weight: 700;
+    line-height: 110%;
+    letter-spacing: -0.03em;
+    @include mobile {
+        font-size: 6rem;
+    }
+}
+
+@mixin heading_2{
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 110%;
+    letter-spacing: -0.03em;
+    @include mobile {
+        font-size: 4rem;
+    }
+}
+
+@mixin heading_3 {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 115%;
+    letter-spacing: -0.03em;
+    @include mobile {
+        font-size: 3rem;
+    }
+}
+
+@mixin text_1{
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 130%;
+    letter-spacing: -0.02em;
+    @include mobile {
+        font-size: 2rem;
+    }
+}
+@mixin text_2{
+    font-size: 1.25rem;
+    font-weight: 400;
+    line-height: 150%;
+    letter-spacing: -0.02em;
+    @include mobile {
+        font-size: 1.5rem;
+    }
+}
+
+@mixin description{
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 130%;
+    letter-spacing: -0.02em;
+    @include mobile {
+        font-size: 1.125rem;
+    }
+}
+
+@mixin button_1{
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 130%;
+    letter-spacing: -0.03em;
+    @include mobile {
+        font-size: 2rem;
+    }
+}
+@mixin button_2{
+    font-size: 1.25rem;
+    font-weight: 400;
+    line-height: 130%;
+    letter-spacing: -0.03em;
+    @include mobile {
+        font-size: 1.5rem;
+    }
+}
+
+.mt-8 {
+    margin-top: 8rem;
+}
+.mt-6 {
+    margin-top: 6rem;
+}
+.mt-4 {
+    margin-top: 4rem;
+}
+.mt-3 {
+    margin-top: 3rem;
+}
+.mt-2 {
+    margin-top: 2rem;
+}
+.mt-1 {
+    margin-top: 1rem;
+}

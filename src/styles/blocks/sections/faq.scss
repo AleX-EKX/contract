@@ -1,0 +1,25 @@
+.faq-section {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+  .container {
+    row-gap: 0;
+  }
+  &__title {
+    max-width: 68.75rem;
+    grid-column: span 4;
+    margin-bottom: 4rem;
+    @include heading_2;
+    text-transform: uppercase;
+    font-weight: 700;
+    @include mobile {
+      margin-bottom: 6rem;
+    }
+    > span {
+      color: $text-accent;
+      white-space: nowrap;
+    }
+  }
+  &__info-block {
+    grid-column: span 4;
+  }
+}

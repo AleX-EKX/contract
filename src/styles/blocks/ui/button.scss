@@ -1,0 +1,120 @@
+.button {
+    @include df_ac_jcc;
+    @include button_1;
+    color: $text-primary;
+    border: 0.063rem solid transparent;
+    text-transform: uppercase;
+    background-color: $bg-accent;
+    font-weight: 600;
+    cursor: pointer;
+    text-align: center;
+    transition: all .3s;
+    @include mobile {
+        border-width: 0.125rem;
+    }
+    &_size {
+        &_basic {
+            padding: 1.25rem 1.5rem;
+            @include mobile {
+                padding: 2rem 2.25rem;
+            }
+        }
+        &_small {
+            padding: 1rem 1.125rem;
+            @include mobile {
+                padding: 1.5rem 1.75rem;
+            }
+        }
+    }
+    &_primary {
+        background-color: $bg-accent;
+        &:hover {
+            background-color: $bg-inverse;
+            border-color: $icon-accent-subdued-40;
+            color: $text-accent;
+        }
+        &:active {
+            background-color: $bg-inverse;
+            color: $text-accent;
+            border-color: $border-accent;
+        }
+        &:disabled {
+            background-color: $bg-accent-subdued-20;
+            color: $text-primary;
+            pointer-events: none;
+        }
+    }
+    &_outlined {
+        border: .125rem solid $border-accent;
+        background-color: $bg-inverse-transparent-5;
+        color: $text-accent;
+        &:hover {
+            border-color: $border-inverse;
+            color: $text-primary;
+        }
+        &:active {
+            border-color: $border-inverse;
+            color: $text-primary;
+        }
+        &:disabled {
+            color: $text-accent-subdued-20;
+            border: .125rem solid $border-accent-subdued-20;
+            pointer-events: none;
+        }
+    }
+    &_ghost {
+        background-color: transparent;
+        color: $text-primary;
+        &:hover {
+            color: $text-accent;
+        }
+        &:hover {
+            color: $text-accent;
+        }
+        &:disabled {
+            color: $text-primary;
+            pointer-events: none;
+        }
+    }
+    &_close {
+        width: 3rem;
+        height: 3rem;
+        padding: 0.5rem;
+        border: none;
+        background-image: url('/src/assets/icons/close.svg');
+        @include bg_s;
+        background-size: contain;
+        opacity: .5;
+        filter: invert(1);
+        cursor: pointer;
+        @include mobile {
+            width: 4.5rem;
+            height: 4.5rem;
+            padding: 0.75rem;
+        }
+        &:hover {
+            opacity: 1;
+            filter: invert(1);
+        }
+        &:active {
+            filter: invert(23%) sepia(68%) saturate(3316%) hue-rotate(353deg) brightness(84%) contrast(79%);
+        }
+    }
+    &_plus {
+        width: 3rem;
+        height: 3rem;
+        padding: 0.5rem;
+        border: none;
+        background-image: url('/src/assets/icons/plus.svg');
+        @include bg_s;
+        background-size: contain;
+        opacity: .4;
+        &:hover {
+            opacity: 1;
+            filter: invert(1);
+        }
+        &:active {
+            filter: invert(22%) sepia(68%) saturate(3127%) hue-rotate(350deg) brightness(87%) contrast(85%);
+        }
+    }
+}

@@ -1,0 +1,59 @@
+.success-section {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+  height: 100dvh;
+  overflow: hidden;
+  &__container {
+    height: 100%;
+    align-items: center;
+    @include mobile {
+      @include df_fdc;
+      justify-content: center;
+    }
+  }
+  &__information {
+    grid-column: span 2;
+    color: $text-primary;
+    width: 100%;
+    @include mobile {
+      @include df_fdc;
+      text-align: center;
+      margin-top: 8rem;
+    }
+    &__title {
+      @include heading_1;
+      text-transform: uppercase;
+      margin-bottom: 1.25rem;
+      @include mobile {
+        margin-bottom: 2.5rem;
+      }
+    }
+    &__description {
+      margin-bottom: 2rem;
+      max-width: 29.813rem;
+      @include text_1;
+      @include mobile {
+        margin: 0 auto;
+        max-width: 40.5rem;
+      }
+    }
+    &__button {
+      width: fit-content;
+    }
+  }
+  &__img {
+    grid-column: span 2;
+    filter: grayscale(1);
+    width: 100%;
+    img {
+      @include image_contain;
+      rotate: -15deg;
+      @include mobile {
+        max-height: 50rem;
+      }
+    }
+  }
+  &__button {
+    margin-top: auto;
+  }
+}

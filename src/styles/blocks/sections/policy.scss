@@ -1,0 +1,26 @@
+.policy-section {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+  &__info-block {
+    grid-column: span 4;
+    &__title {
+      @include heading_1;
+      text-align: center;
+      text-transform: uppercase;
+      margin-bottom: 6rem;
+      word-break: break-word;
+      @include mobile {
+        margin-bottom: 2.5rem;
+      }
+    }
+    &__content {
+      max-width: 50rem;
+      margin: 0 auto;
+      p {
+        &:not(:last-child) {
+          padding-bottom: 3rem;
+        }
+      }
+    }
+  }
+}

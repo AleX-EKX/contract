@@ -1,0 +1,33 @@
+.payouts-section {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+  .container {
+    row-gap: 0;
+    @include df_fdc;
+  }
+  &__title {
+    grid-column: span 4;
+    text-align: center;
+    margin-bottom: 4rem;
+    @include heading_2;
+    text-transform: uppercase;
+    font-weight: 700;
+    > span {
+      color: $text-accent;
+      white-space: nowrap;
+    }
+  }
+  &__info-block {
+    grid-column: span 4;
+    @include grid(4, 2rem);
+    @include mobile {
+      @include df_fdc;
+      gap: 2rem;
+    }
+    .card {
+      &:nth-child(5) {
+        grid-column: 2/4;
+      }
+    }
+  }
+}

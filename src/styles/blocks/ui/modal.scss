@@ -1,0 +1,20 @@
+.modal {
+    .modal-dialog {
+        .modal-content {
+            .modal-body {
+                .button_close {
+                    position: absolute;
+                    top: -1.25rem;
+                    right: 0;
+                    transform: translate(100%, -100%);
+                    z-index: 2;
+                    @include mobile {
+                        transform: none;
+                        top: 3rem;
+                        right: 3rem;
+                    }
+                }
+            }
+        }
+    }
+}

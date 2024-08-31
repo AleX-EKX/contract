@@ -1,0 +1,91 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+html{
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    @include desktop {
+      font-size: .8333vw;
+    }
+    @include mobile {
+        font-size: 8px;
+    }
+}
+
+body {
+    width: 100vw;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    font-family: 'Wix Madefor Display', sans-serif;
+    box-sizing: border-box;
+    background-color: $bg-primary;
+    @include text_1;
+    color: $text-primary;
+    a {
+        color: $text-primary;
+        transition: all .3s;
+        &:hover {
+            color: $text-primary;
+            opacity: .7;
+        }
+    }
+}
+
+main {
+    max-width: 1921px;
+    margin: 0 auto;
+    @include desktop {
+        margin: 0;
+        max-width: none;
+    }
+}
+
+hr {
+    margin: 0;
+}
+
+h1, h2, h3, h4 {
+    margin: 0;
+}
+fieldset {
+    padding: 0;
+    margin: 0;
+    border: none;
+    height: 100%;
+}
+
+button, 
+textarea {
+    cursor: pointer;
+    border: none;
+    background: none;
+    padding: 0;
+}
+
+a {
+    cursor: pointer;
+    text-decoration: none;
+}
+p {
+    margin: 0;
+}
+
+.oh {
+    overflow: hidden!important;
+}
+
+.desktop {
+    @include mobile {
+        display: none!important;
+    }
+}
+.mobile {
+    display: none;
+    @include mobile {
+        display: block;
+    }
+}

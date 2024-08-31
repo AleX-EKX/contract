@@ -1,0 +1,18 @@
+.separator-section {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+  overflow: hidden;
+  &__container {
+    display: flex;
+    justify-content: center;
+    padding: 2rem 0;
+    background-color: $bg-accent;
+  }
+  &__text {
+    @include heading_2;
+    text-transform: uppercase;
+    white-space: nowrap;
+    text-align: center;
+    color: $text-inverse;
+  }
+}

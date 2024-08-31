@@ -1,0 +1,43 @@
+.lead-form {
+    color: $text-inverse;
+    padding: 2rem;
+    background-color: $bg-inverse;
+    @include df_fdc;
+    gap: 1.875rem;
+    @include mobile {
+        gap: 3rem;
+    }
+    .form__fields {
+        @include df_fdc;
+        gap: 1rem;
+        @include mobile {
+            gap: 2rem;
+        }
+        &__grid-2 {
+            @include grid(2, 0);
+            @include mobile {
+                @include df_fdc;
+                gap: 2rem;
+            }
+        }
+        &__approval {
+            color: $text-inverse;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            width: fit-content;
+            height: fit-content;
+            @include mobile {
+                gap: 0.75rem;
+            }
+            > span {
+                @include text_2;
+            }
+        }
+        &__description {
+            @include description;
+            color: $text-inverse-subdued-60;
+        }
+    }
+}

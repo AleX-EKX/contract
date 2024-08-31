@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Служба по контракту</title>
+    <link rel="stylesheet" href="../src/styles/main.css">
+</head>
+
+<header class="header-section">
+    <div class="header-section__container container">
+        <div class="header-section__info-block">
+            <div class="header-section__info-block__burger">
+                <span></span>
+                <span></span>
+            </div>
+            <div class="header-section__info-block__nav">
+                <ul class="header-section__info-block__nav__list">
+                    <li class="header-section__info-block__nav__list__li"><a href="#" class="header-section__info-block__nav__list__li__link">Выплаты</a></li>
+                    <li class="header-section__info-block__nav__list__li"><a href="#" class="header-section__info-block__nav__list__li__link">Льготы</a></li>
+                    <li class="header-section__info-block__nav__list__li"><a href="#" class="header-section__info-block__nav__list__li__link">Вакансии</a></li>
+                    <li class="header-section__info-block__nav__list__li"><a href="#" class="header-section__info-block__nav__list__li__link">Условия контракта</a></li>
+                    <li class="header-section__info-block__nav__list__li"><a href="#" class="header-section__info-block__nav__list__li__link">Женщинам</a></li>
+                </ul>
+            </div>
+            <div class="header-section__info-block__contacts">
+                <div class="header-section__info-block__contacts__phone-block">
+                    <div class="header-section__info-block__contacts__phone-block__icon"><img src="/src/assets/icons/phone.svg" alt=""></div>
+                    <div class="header-section__info-block__contacts__phone-block__sub">
+                        <ul class="header-section__info-block__contacts__phone-block__sub__list">
+                            <li class="header-section__info-block__contacts__phone-block__sub__list__li">
+                                <div class="header-section__info-block__contacts__phone-block__sub__list__li__name">Центральный и Комсомольский р-н</div>
+                                <a href="tel:+7 (8482) 48-64-50" class="header-section__info-block__contacts__phone-block__sub__list__li__value">+7 (8482) 48-64-50</a>
+                            </li>
+                            <li class="header-section__info-block__contacts__phone-block__sub__list__li">
+                                <div class="header-section__info-block__contacts__phone-block__sub__list__li__name">Автозаводский р-н</div>
+                                <a href="tel:+7 (917) 117-17-40" class="header-section__info-block__contacts__phone-block__sub__list__li__value">+7 (917) 117-17-40</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="header-section__info-block__contacts__button">
+                    <a href="https://tgl.ru/" class="button button_outlined button_size_basic desktop">Официальный сайт</a>
+                </div>
+                <div class="header-section__info-block__contacts__button" data-bs-toggle="modal" data-bs-target="#infoModal">
+                    <a class="button button_primary button_size_basic">Хочу служить</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="mob-menu">
+        <ul class="mob-menu__list">
+            <li class="mob-menu__list__li"><a href="#" class="mob-menu__list__li__link">Выплаты</a></li>
+            <li class="mob-menu__list__li"><a href="#" class="mob-menu__list__li__link">Льготы</a></li>
+            <li class="mob-menu__list__li"><a href="#" class="mob-menu__list__li__link">Вакансии</a></li>
+            <li class="mob-menu__list__li"><a href="#" class="mob-menu__list__li__link">Условия контракта</a></li>
+            <li class="mob-menu__list__li"><a href="#" class="mob-menu__list__li__link">Женщинам</a></li>
+        </ul>
+        <ul class="header-section__info-block__contacts__phone-block__sub__list">
+            <li class="header-section__info-block__contacts__phone-block__sub__list__li">
+                <div class="header-section__info-block__contacts__phone-block__sub__list__li__name">Центральный и Комсомольский р-н</div>
+                <a href="tel:+7 (8482) 48-64-50" class="header-section__info-block__contacts__phone-block__sub__list__li__value">+7 (8482) 48-64-50</a>
+            </li>
+            <li class="header-section__info-block__contacts__phone-block__sub__list__li">
+                <div class="header-section__info-block__contacts__phone-block__sub__list__li__name">Автозаводский р-н</div>
+                <a href="tel:+7 (917) 117-17-40" class="header-section__info-block__contacts__phone-block__sub__list__li__value">+7 (917) 117-17-40</a>
+            </li>
+        </ul>
+        <a href="https://tgl.ru/" class="button button_outlined button_size_small mob-menu__button">Официальный сайт</a>
+    </div>
+</header>
+<div class="cookie" id="cookie_notification">
+    <div class="cookie__content">
+        <div class="cookie__content__header">
+            <div class="cookie__content__header__title">Мы используем Cookie</div>
+            <div class="button_close cookie-close"></div>
+        </div>
+        <div class="cookie__content__body">Без них мы не можем гарантировать правильную службу сайта</div>
+        <div class="button button_size_basic button_primary cookie-alert__button">Используйте</div>
+    </div>
+</div>
+<body>
+    <main>
+        <div class="button-add">
+            <div class="button button_primary button_size_basic" data-bs-toggle="modal" data-bs-target="#infoModal">Оставить заявку</div>
+        </div>
+        <section class="hero-section">
+            <div class="hero-section__img"><img src="/src/assets/img/hero-bann.jpg" alt=""></div>
+            <div class="hero-section__container container">
+                <div class="hero-section__info-block">
+                    <div class="hero-section__info-block__content">
+                        <div class="hero-section__info-block__content__title">3 320 000 ₽ в год!</div>
+                        <div class="hero-section__info-block__content__body">1 000 000 ₽ в первый МЕСЯЦ, берем с отношением</div>
+                    </div>
+                    <div class="button button_primary button_size_basic" data-bs-toggle="modal" data-bs-target="#infoModal">Оставить заявку</div>
+                </div>
+            </div>
+        </section>
+        <section class="payouts-section">
+            <div class="payouts-section__container container">
+                <div class="payouts-section__title">При заключении контракта о прохождении военной службы Вам гарантируется
+<span>1 000 000 ₽</span></div>
+                <div class="payouts-section__info-block">
+                    <div class="card card_basic">
+                        <div class="card_basic__header">
+                            <div class="card_basic__header__title">200 000 ₽</div>
+                        </div>
+                        <div class="card_basic__body">
+                            <div class="card_basic__body__text">Единовременная городская выплата для заключивших контракт в г. Тольятти</div>
+                        </div>
+                    </div>
+                    <div class="card card_basic">
+                        <div class="card_basic__header">
+                            <div class="card_basic__header__title">200 000 ₽</div>
+                        </div>
+                        <div class="card_basic__body">
+                            <div class="card_basic__body__text">Единовременная городская выплата для заключивших контракт в г. Тольятти</div>
+                        </div>
+                    </div>
+                    <div class="card card_basic">
+                        <div class="card_basic__header">
+                            <div class="card_basic__header__title">200 000 ₽</div>
+                        </div>
+                        <div class="card_basic__body">
+                            <div class="card_basic__body__text">Единовременная городская выплата для заключивших контракт в г. Тольятти</div>
+                        </div>
+                    </div>
+                    <div class="card card_basic">
+                        <div class="card_basic__header">
+                            <div class="card_basic__header__title">200 000 ₽</div>
+                        </div>
+                        <div class="card_basic__body">
+                            <div class="card_basic__body__text">Единовременная городская выплата для заключивших контракт в г. Тольятти</div>
+                        </div>
+                    </div>
+                    <div class="card card_wide">
+                        <div class="card_wide__header">
+                            <div class="card_wide__header__title">ОТ 210 000 ₽</div>
+                        </div>
+                        <div class="card_wide__body">
+                            <div class="card_wide__body__text">Денежное довольствие ежемесячно во время службы</div>
+                            <div class="card_wide__body__description">В зависимости от воинского звания, должности и выслуги лет, а также при выполнении специальных задач</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="additional-payouts-section">
+            <div class="additional-payouts-section__container container">
+                <div class="additional-payouts-section__title">Дополнительные выплаты</div>
+                <div class="additional-payouts-section__info-block">
+                    <div class="additional-payouts-section__info-block__item">
+                        <div class="additional-payouts-section__info-block__item__name">За каждые сутки активных наступательных действий</div>
+                        <div class="additional-payouts-section__info-block__item__price">8 000 ₽</div>
+                    </div>
+                    <div class="additional-payouts-section__info-block__item">
+                        <div class="additional-payouts-section__info-block__item__name">За каждые сутки активных наступательных действий</div>
+                        <div class="additional-payouts-section__info-block__item__price">8 000 ₽</div>
+                    </div>
+                    <div class="additional-payouts-section__info-block__item">
+                        <div class="additional-payouts-section__info-block__item__name">За каждые сутки активных наступательных действий</div>
+                        <div class="additional-payouts-section__info-block__item__price">8 000 ₽</div>
+                    </div>
+                    <div class="additional-payouts-section__info-block__item">
+                        <div class="additional-payouts-section__info-block__item__name">За каждые сутки активных наступательных действий</div>
+                        <div class="additional-payouts-section__info-block__item__price">8 000 ₽</div>
+                    </div>
+                    <div class="additional-payouts-section__info-block__item">
+                        <div class="additional-payouts-section__info-block__item__name">За каждые сутки активных наступательных действий</div>
+                        <div class="additional-payouts-section__info-block__item__price">8 000 ₽</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="social-benefits-section">
+            <div class="social-benefits-section__container container">
+                <div class="social-benefits-section__title">Социальные льготы и гарантии</div>
+                <div class="social-benefits-section__info-block">
+                    <div class="card_img_large">
+                        <div class="card_img_large__img"><img src="/src/assets/test/1.png" alt=""></div>
+                        <div class="card_img_large__header">
+                            <div class="card_img_large__header__title">Контрактнику</div>
+                        </div>
+                        <div class="card_img_large__body">
+                            <ul class="card_img_large__body__list">
+                                <li class="card_img_large__body__list__li">Возможность приобрести жильё за счёт Минобороны через накопительно-ипотечную систему</li>
+                                <li class="card_img_large__body__list__li">Служебное жильё или компенсация за наём</li>
+                                <li class="card_img_large__body__list__li">Возможность приобрести жильё за счёт Минобороны через накопительно-ипотечную систему</li>
+                                <li class="card_img_large__body__list__li">Возможность приобрести жильё за счёт Минобороны через накопительно-ипотечную систему</li>
+                                <li class="card_img_large__body__list__li">Возможность приобрести жильё за счёт Минобороны через накопительно-ипотечную систему</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card_img_large">
+                        <div class="card_img_large__img"><img src="/src/assets/test/1.png" alt=""></div>
+                        <div class="card_img_large__header">
+                            <div class="card_img_large__header__title">Его семье</div>
+                        </div>
+                        <div class="card_img_large__body">
+                            <ul class="card_img_large__body__list">
+                                <li class="card_img_large__body__list__li">Возможность приобрести жильё за счёт Минобороны через накопительно-ипотечную систему</li>
+                                <li class="card_img_large__body__list__li">Служебное жильё или компенсация за наём</li>
+                                <li class="card_img_large__body__list__li">Возможность приобрести жильё за счёт Минобороны через накопительно-ипотечную систему</li>
+                                <li class="card_img_large__body__list__li">Возможность приобрести жильё за счёт Минобороны через накопительно-ипотечную систему</li>
+                                <li class="card_img_large__body__list__li">Возможность приобрести жильё за счёт Минобороны через накопительно-ипотечную систему</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="vacancies-section">
+            <div class="vacancies-section__container container">
+                <div class="vacancies-section__title">Вакансии</div>
+                <div class="vacancies-section__info-block">
+                    <div class="card_img_basic">
+                        <div class="card_img_basic__img"><img src="/src/assets/test/2.webp" alt=""></div>
+                        <div class="card_img_basic__header">
+                            <div class="card_img_basic__header__title">Тыловые войска обеспечения</div>
+                        </div>
+                        <div class="card_img_basic__body">
+                            <div class="card_img_basic__body__text">
+                                Принимаются водители категорий C и CE
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card_img_basic">
+                        <div class="card_img_basic__img"><img src="/src/assets/test/2.webp" alt=""></div>
+                        <div class="card_img_basic__header">
+                            <div class="card_img_basic__header__title">Тыловые войска обеспечения</div>
+                        </div>
+                        <div class="card_img_basic__body">
+                            <div class="card_img_basic__body__text">
+                                Принимаются водители категорий C и CE
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card_img_basic">
+                        <div class="card_img_basic__img"><img src="/src/assets/test/2.webp" alt=""></div>
+                        <div class="card_img_basic__header">
+                            <div class="card_img_basic__header__title">Тыловые войска обеспечения</div>
+                        </div>
+                        <div class="card_img_basic__body">
+                            <div class="card_img_basic__body__text">
+                                Принимаются водители категорий C и CE
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="contracts-terms-section">
+            <div class="contracts-terms-section__container container">
+                <div class="contracts-terms-section__title">Как заключить контракт на военную службу</div>
+                <div class="contracts-terms-section__info-block">
+                    <div class="card_img_basic">
+                        <div class="card_img_basic__img"><img src="/src/assets/test/2.webp" alt=""></div>
+                        <div class="card_img_basic__header">
+                            <div class="card_img_basic__header__title">Тыловые войска обеспечения</div>
+                        </div>
+                        <div class="card_img_basic__body">
+                            <div class="card_img_basic__body__text">
+                                <ul>
+                                    <li>123</li>
+                                    <li>123 456456</li>
+                                    <li>ffdh fgh fgh 123 456456</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card_img_basic">
+                        <div class="card_img_basic__img"><img src="/src/assets/test/2.webp" alt=""></div>
+                        <div class="card_img_basic__header">
+                            <div class="card_img_basic__header__title">Тыловые войска обеспечения</div>
+                        </div>
+                        <div class="card_img_basic__body">
+                            <div class="card_img_basic__body__text">
+                                Принимаются водители категорий C и CE
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card_img_basic">
+                        <div class="card_img_basic__img"><img src="/src/assets/test/2.webp" alt=""></div>
+                        <div class="card_img_basic__header">
+                            <div class="card_img_basic__header__title">Тыловые войска обеспечения</div>
+                        </div>
+                        <div class="card_img_basic__body">
+                            <div class="card_img_basic__body__text">
+                                Принимаются водители категорий C и CE
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card_img_basic">
+                        <div class="card_img_basic__img"><img src="/src/assets/test/2.webp" alt=""></div>
+                        <div class="card_img_basic__header">
+                            <div class="card_img_basic__header__title">Тыловые войска обеспечения</div>
+                        </div>
+                        <div class="card_img_basic__body">
+                            <div class="card_img_basic__body__text">
+                                Принимаются водители категорий C и CE
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="form-section">
+            <div class="form-section__container container">
+                <div class="form-section__container__img"><img src="/src/assets/img/form.png" alt=""></div>
+                <div class="form-section__form-block">
+                    <div class="form-section__form-block__title">Ты нужен для серьезных задач</div>
+                    <form name="callback" class="lead-form">
+                        <input type="hidden" name="bid" value="2">
+                        <div class="form__fields">
+                            <label class="form__field">
+                                <span class="form__field__name">ФИО</span>
+                                <input type="text" class="form__field__input" name="name" placeholder="Иванов Иван Иванович">
+                            </label>
+                            <label class="form__field">
+                                <span class="form__field__name">Номер телефона</span>
+                                <input type="phone" class="form__field__input" name="phone" placeholder="+7(___)-___-__-__">
+                            </label>
+                            <div class="form__fields__grid-2">
+                                <label class="form__fields__approval">
+                                    <input type="checkbox" name="approval" nam>
+                                    <span>Да, мне 18 или более лет</span>
+                                </label>
+                                <div class="form__fields__description">Нажимая кнопку «Отправить», Вы даете согласие на обработку персональных данных</div>
+                            </div>
+                        </div>
+                        <button type="submit" class="button button_primary button_size_basic">Отправить</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <section class="separator-section">
+            <div class="separator-section__container">
+                <div class="separator-section__text">СЛУЖБА ПО КОНТРАКТУ — престижная мужская работа</div>
+            </div>
+        </section>
+        <section class="certain-part-section">
+            <div class="certain-part-section__img"><img src="/src/assets/img/question.jpg" alt=""></div>
+            <div class="certain-part__container container">
+                <div class="certain-part-section__info-block">
+                    <div class="certain-part-section__info-block__title">Хотите служить в определенной части?</div>
+                    <div class="certain-part-section__info-block__text">
+                        <p>Приходите с документом об отношениях с воинской частью и мы направим вас именно туда</p>
+                        <p>Также мы помогаем военнослужащих по контракту с кредитными каникулами и отсрочками на платежи и налоги</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="another-region-section">
+            <div class="another-region__container container">
+                <div class="another-region-section__title">Если вы из другого региона, вам полагается</div>
+                <div class="another-region-section__info-block">
+                    <div class="card_img_basic">
+                        <div class="card_img_basic__img"><img src="/src/assets/test/2.webp" alt=""></div>
+                        <div class="card_img_basic__header">
+                            <div class="card_img_basic__header__title">Тыловые войска обеспечения</div>
+                        </div>
+                        <div class="card_img_basic__body">
+                            <div class="card_img_basic__body__text">
+                                Принимаются водители категорий C и CE
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card_img_basic">
+                        <div class="card_img_basic__img"><img src="/src/assets/test/2.webp" alt=""></div>
+                        <div class="card_img_basic__header">
+                            <div class="card_img_basic__header__title">Тыловые войска обеспечения</div>
+                        </div>
+                        <div class="card_img_basic__body">
+                            <div class="card_img_basic__body__text">
+                                Принимаются водители категорий C и CE
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card_img_basic">
+                        <div class="card_img_basic__img"><img src="/src/assets/test/2.webp" alt=""></div>
+                        <div class="card_img_basic__header">
+                            <div class="card_img_basic__header__title">Тыловые войска обеспечения</div>
+                        </div>
+                        <div class="card_img_basic__body">
+                            <div class="card_img_basic__body__text">
+                                Принимаются водители категорий C и CE
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="offer-nurses-section">
+            <div class="offer-nurses-section__img"><img src="/src/assets/img/women.png" alt=""></div>
+            <div class="offer-nurses-section__container container">
+                <div class="offer-nurses-section__info-block">
+                    <div class="offer-nurses-section__info-block__title">Предложение для женщин- медработников</div>
+                    <div class="offer-nurses-section__info-block__content">
+                        <p>Приглашаем женщин с профильным медицинским образованием на службу по контракту.</p>
+                        <p>Требования к женщинам аналогичны мужчинам, единственное:</p>
+                        <p>Пополнить ряды Вооруженных сил могут женщины <b>до 43 лет</b> с профильным медицинским образованием</p>
+                    </div>
+                    <div class="offer-nurses-section__info-block__button-block">
+                        <div class="button button_size_basic button_primary" data-bs-toggle="modal" data-bs-target="#infoModal">Оставить заявку</div>
+                        <div class="button button_size_basic button_outlined">Читать условия</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="faq-section">
+            <div class="faq-section__container container">
+                <div class="faq-section__title">Часто задаваемые вопросы</div>
+                <div class="faq-section__info-block">
+                    <div class="accordion accordion-flush" id="accordionFaq">
+                        <div class="accordion-item">
+                            <div class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse1" aria-expanded="false" aria-controls="flush-collapse1">Берут ли на службу с отношением?</button>
+                            </div>
+                            <div id="flush-collapse1" class="accordion-collapse collapse" data-bs-parent="#accordionFaq">
+                                <div class="accordion-body">Так точно! Мы берем кандидатов по отношениям в любые рода войск. Ни в коем случае не откажем, и поможем вам служить в вашей части.</div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <div class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse2" aria-expanded="false" aria-controls="flush-collapse2">Как заключается контракт?</button>
+                            </div>
+                            <div id="flush-collapse2" class="accordion-collapse collapse" data-bs-parent="#accordionFaq">
+                                <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine this being filled with some actual content.</div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <div class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse3" aria-expanded="false" aria-controls="flush-collapse3">На какой срок можно заключить контракт?</button>
+                            </div>
+                            <div id="flush-collapse3" class="accordion-collapse collapse" data-bs-parent="#accordionFaq">
+                                <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine this being filled with some actual content.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer-section">
+        <div class="footer-section__container container">
+            <div class="footer-section__info-block__info-point-block">
+                <div class="footer-section__info-block__info-point-block__info-point">
+                    <div class="footer-section__info-block__info-point-block__info-point__name">Центральный и комсомольский р-н</div>
+                    <div class="footer-section__info-block__info-point-block__info-point__add">
+                        <div class="footer-section__info-block__info-point-block__info-point__address">ул. Ушакова, 34</div>
+                        <div class="footer-section__info-block__info-point-block__info-point__phone"><a href="tel:+7 (8482) 48-64-50">+7 (8482) 48-64-50</a></div>
+                    </div>
+                </div>
+                <div class="footer-section__info-block__info-point-block__info-point">
+                    <div class="footer-section__info-block__info-point-block__info-point__name">Автозаводской р-н</div>
+                    <div class="footer-section__info-block__info-point-block__info-point__add">
+                        <div class="footer-section__info-block__info-point-block__info-point__address">ул. Ворошилова, 2а</div>
+                        <div class="footer-section__info-block__info-point-block__info-point__phone"><a href="tel:+7 (917) 117-17-40">+7 (917) 117-17-40</a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-section__info-block__nav">
+                <ul class="footer-section__info-block__nav__list">
+                    <li class="footer-section__info-block__nav__list__li">
+                        <a href="#" class="footer-section__info-block__nav__list__li__link">Выплаты</a>
+                    </li>
+                    <li class="footer-section__info-block__nav__list__li">
+                        <a href="#" class="footer-section__info-block__nav__list__li__link">Льготы</a>
+                    </li>
+                    <li class="footer-section__info-block__nav__list__li">
+                        <a href="#" class="footer-section__info-block__nav__list__li__link">Вакансии</a>
+                    </li>
+                    <li class="footer-section__info-block__nav__list__li">
+                        <a href="#" class="footer-section__info-block__nav__list__li__link">Условия контракта</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-section__info-block__add">
+                <div class="footer-section__info-block__add__text desktop">
+                    <a href="#" class="footer-section__info-block__add__text__link">Политика конфиденциальности</a>
+                    <a href="https://studiya-saitov.com/" class="footer-section__info-block__add__text__link">Разработано Студией Сайтов</a>
+                </div>
+                <div class="socials">
+                    <div class="socials__link"><img src="/src/assets/img/socials/tg.svg" alt="" class="socials__link__img"></div>
+                    <div class="socials__link"><img src="/src/assets/img/socials/wts.svg" alt="" class="socials__link__img"></div>
+                    <div class="socials__link"><img src="/src/assets/img/socials/viber.svg" alt="" class="socials__link__img"></div>
+                </div>
+            </div>
+            <div class="footer-section__info-block__add__text mobile">
+                <a href="#" class="footer-section__info-block__add__text__link">Политика конфиденциальности</a>
+                <a href="https://studiya-saitov.com/" class="footer-section__info-block__add__text__link">Разработано Студией Сайтов</a>
+            </div>
+        </div>
+    </footer>
+
+<div class="modal fade" id="infoModal" tabindex="-1" aria-labelledby="infoModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-body form-section__container">
+                <button class="button_close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+                <div class="form-section__container__img"><img src="/src/assets/img/form.png" alt=""></div>
+                <div class="form-section__form-block">
+                    <div class="form-section__form-block__title">Ты нужен для серьезных задач</div>
+                    <form name="callback" class="lead-form">
+                        <input type="hidden" name="bid" value="2">
+                        <div class="form__fields">
+                            <label class="form__field">
+                                <span class="form__field__name">ФИО</span>
+                                <input type="text" class="form__field__input" name="name" placeholder="Иванов Иван Иванович">
+                            </label>
+                            <label class="form__field">
+                                <span class="form__field__name">Номер телефона</span>
+                                <input type="phone" class="form__field__input" name="phone" placeholder="+7(___)-___-__-__">
+                            </label>
+                            <div class="form__fields__grid-2">
+                                <label class="form__fields__approval">
+                                    <input type="checkbox">
+                                    <span>Да, мне 18 или более лет</span>
+                                </label>
+                                <div class="form__fields__description">Нажимая кнопку «Отправить», Вы даете согласие на обработку персональных данных</div>
+                            </div>
+                        </div>
+                        <button type="submit" class="button button_primary button_size_basic">Отправить</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+<script type="module" src="../src/scripts/app.js"></script>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+</html>

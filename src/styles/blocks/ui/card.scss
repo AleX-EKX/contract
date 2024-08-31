@@ -1,0 +1,184 @@
+.card {
+  &_basic {
+    background-color: $bg-accent;
+    color: $text-primary;
+    @include df_fdc;
+    gap: 0.25rem;
+    padding: 2rem;
+    &__header {
+      &__title {
+        @include heading_3;
+        font-weight: 700;
+      }
+    }
+    &__body {
+      @include df_fdc;
+      gap: 0.5rem;
+      &__text {
+        @include text_1;
+      }
+      &__description {
+        @include description;
+        color: $text-accent-subdued-20;
+      }
+    }
+  }
+  &_wide {
+    background-color: $bg-accent;
+    color: $text-primary;
+    @include df_fdc;
+    gap: 0.25rem;
+    padding: 2rem;
+    grid-column: span 2;
+    &__header {
+      &__title {
+        @include heading_3;
+        font-weight: 700;
+      }
+    }
+    &__body {
+      @include df_fdc;
+      gap: 0.5rem;
+      &__text {
+        @include text_1;
+      }
+      &__description {
+        @include description;
+        color: $text-accent-subdued-20;
+      }
+    }
+  }
+  &_img {
+    &_large {
+      position: relative;
+      padding: 2rem;
+      background-color: $bg-primary;
+      @include df_fdc;
+      gap: 2rem;
+      @include mobile {
+        gap: 4rem;
+      }
+      &::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: $bg-primary;
+        opacity: .5;
+        z-index: 1;
+      }
+      &__img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        filter: grayscale(1);
+        z-index: 0;
+        img {
+          @include image_cover;
+          object-position: top;
+        }
+      }
+      &__header {
+        max-width: 50%;
+        z-index: 1;
+        @include mobile {
+          max-width: none;
+        }
+        &__title {
+          color: $text-accent;
+          text-transform: uppercase;
+          @include heading_3;
+          font-weight: 700;
+        }
+      }
+      &__body {
+        max-width: 50%;
+        z-index: 1;
+        @include mobile {
+          max-width: none;
+        }
+        &__list {
+          color: $text-primary;
+          @include df_fdc;
+          gap: 1.25rem;
+          list-style: none;
+          margin: 0;
+          padding: 0;
+          &__li {
+            display: flex;
+            align-items: center;
+            gap: 1.25rem;
+            @include mobile {
+              gap: 2.5rem;
+            }
+            &::before {
+              content: '';
+              width: 2rem;
+              height: 2rem;
+              background-image: url("/src/assets/icons/check.svg");
+              @include bg_s;
+              background-size: contain;
+              filter: invert(21%) sepia(92%) saturate(3487%) hue-rotate(351deg) brightness(81%) contrast(84%);
+              flex: none;
+            }
+          }
+        }
+      }
+    }
+    &_basic {
+      position: relative;
+      padding: 2rem;
+      min-height: 31.25rem;
+      @include bg_s;
+      @include df_fdc;
+      gap: 1rem;
+      @include mobile {
+        gap: 2rem;
+        min-height: 40.875rem;
+      }
+      &::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background: linear-gradient(0deg, rgba(33,33,33,0) 0%, rgba(33,33,33,1) 100%);
+        z-index: 1;
+      }
+      &__img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        filter: grayscale(1);
+        z-index: 0;
+        img {
+          @include image_cover;
+          object-position: top;
+        }
+      }
+      &__header {
+        z-index: 1;
+        &__title {
+          color: $text-accent;
+          text-transform: uppercase;
+          @include heading_3;
+          font-weight: 700;
+        }
+      }
+      &__body {
+        z-index: 1;
+        &__text {
+          color: $text-primary;
+          @include text_1;
+        }
+      }
+    }
+  }
+}

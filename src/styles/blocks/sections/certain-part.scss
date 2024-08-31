@@ -1,0 +1,65 @@
+.certain-part-section {
+  margin-top: 6rem;
+  margin-bottom: 6rem;
+  position: relative;
+  .container {
+    row-gap: 0;
+  }
+  &::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: $bg-primary;
+    opacity: .5;
+    z-index: 1;
+  }
+  &__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    filter: grayscale(1);
+    opacity: .5;
+    z-index: 0;
+    img {
+      @include image_cover;
+      object-position: top;
+    }
+  }
+  &__info-block {
+    position: relative;
+    grid-column: span 4;
+    @include df_fdc;
+    gap: 2rem;
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+    z-index: 1;
+    @include mobile {
+      gap: 2.5rem;
+    }
+    &__title {
+      @include heading_2;
+      text-transform: uppercase;
+      max-width: 51.563rem;
+      margin: 0 auto;
+    }
+    &__text {
+      max-width: 51.563rem;
+      margin: 0 auto;
+      @include text_1;
+      p {
+        padding-bottom: 1.25rem;
+        @include mobile {
+          padding-bottom: 2rem;
+        }
+        &:last-child {
+          padding-bottom: 0;
+        }
+      }
+    }
+  }
+}

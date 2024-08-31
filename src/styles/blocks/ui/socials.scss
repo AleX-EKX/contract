@@ -1,0 +1,28 @@
+.socials {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.25rem;
+    &__link {
+        width: 4rem;
+        height: 4rem;
+        padding: 1rem;
+        background-color: $icon-inverse;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: all .3s;
+        &__img {
+            @include image_contain;
+        }
+        &:hover {
+            background-color: $bg-accent;
+        }
+        &:active {
+            background-color: $bg-inverse;
+            .socials__link__img {
+                filter: invert(87%) sepia(44%) saturate(5633%) hue-rotate(351deg) brightness(105%) contrast(85%);
+            }
+        }
+    }
+}

@@ -1,0 +1,44 @@
+.form,
+form {
+    @include df_fdc;
+    row-gap: 1.25rem;
+    &__field{
+        @include df_fdc;
+        border: none;
+        gap: 0.5rem;
+        &__name {
+            @include text_2;
+            text-transform: uppercase;
+        }
+        &__input {
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+            width: 100%;
+            padding: 1rem;
+            background-color: $bg-inverse;
+            border: 0.063rem solid $icon-primary-subdued-10;
+            transition: all .3s;
+            @include text_2;
+            @include mobile {
+                border-width: 0.125rem;
+                padding: 1.5rem;
+            }
+            &.wrong {
+                border-color: $border-system-wrong;
+            }
+            &:hover{
+                border-color: $border-accent-subdued-60;
+            }
+            &:focus{
+                outline: none;
+            }
+            &:active{
+                border-color: $bg-accent;
+            }
+            &::placeholder{
+                color: $text-inverse-subdued-20;
+            }
+        }
+    }
+}

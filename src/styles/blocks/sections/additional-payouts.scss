@@ -1,0 +1,64 @@
+.additional-payouts-section {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+  .container {
+    row-gap: 0;
+  }
+  &__title {
+    max-width: 68.75rem;
+    grid-column: span 4;
+    margin-bottom: 4rem;
+    @include heading_2;
+    text-transform: uppercase;
+    font-weight: 700;
+    @include mobile {
+      margin-bottom: 6rem;
+    }
+    > span {
+      color: $text-accent;
+      white-space: nowrap;
+    }
+  }
+  &__info-block {
+    grid-column: span 4;
+    &__item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.875rem 0;
+      transition: all .3s;
+      gap: 0.5rem;
+      @include mobile {
+        gap: 1rem;
+        @include df_fdc;
+        align-items: flex-start;
+      }
+      &:hover {
+        padding: 2rem;
+        background-color: $bg-accent;
+        .additional-payouts-section__info-block__item__price {
+          color: $text-primary;
+        }
+      }
+      &:not(:last-child) {
+        border-bottom: 0.063rem solid $border-primary-subdued-60;
+        @include mobile {
+          border-width: 0.125rem;
+        }
+      }
+      &__price {
+        @include heading_3;
+        color: $text-accent;
+        transition: all .3s;
+        @include mobile {
+          order: 1;
+        }
+      }
+      &__name {
+        @include mobile {
+          order: 2;
+        }
+      }
+    }
+  }
+}

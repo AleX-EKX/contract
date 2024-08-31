@@ -1,0 +1,33 @@
+.another-region-section {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+  .container {
+    row-gap: 0;
+  }
+  &__title {
+    max-width: 68.75rem;
+    grid-column: span 4;
+    margin-bottom: 4rem;
+    @include heading_2;
+    text-transform: uppercase;
+    font-weight: 700;
+    @include mobile {
+      margin-bottom: 6rem;
+    }
+    > span {
+      color: $text-accent;
+      white-space: nowrap;
+    }
+  }
+  &__info-block {
+    grid-column: span 4;
+    @include df_fdc;
+    gap: 4rem;
+    .card_img_basic {
+      min-height: fit-content;
+      @include mobile {
+        min-height: 40.875rem;
+      }
+    }
+  }
+}

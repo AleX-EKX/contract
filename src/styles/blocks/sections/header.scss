@@ -1,0 +1,200 @@
+.header-section {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: $bg-primary;
+  z-index: 10;
+  transition: all .3s;
+  &.sticky {
+    transform: translateY(-100%);
+  }
+  @include mobile {
+    position: fixed;
+  }
+  &__info-block {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    grid-column: span 4;
+    padding: 1.5rem 0;
+    &__burger {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 1.5rem;
+      height: 1.5rem;
+      gap: 0.438rem;
+      cursor: pointer;
+      position: relative;
+      transition: all .3s;
+      @include mobile {
+        width: 3rem;
+        height: 3rem;
+        display: flex;
+        gap: 0.875rem;
+      }
+      &.active {
+        gap: 0;
+        > span {
+          position: absolute;
+          &:nth-child(1) {
+            rotate: 45deg;
+          }
+          &:nth-child(2) {
+            rotate: -45deg;
+          }
+        }
+      }
+      > span {
+        width: 100%;
+        height: 0.125rem;
+        background-color: $icon-primary;
+        transition: all .3s;
+        @include mobile {
+          height: 0.25rem;
+        }
+      }
+    }
+    &__nav {
+      @include mobile {
+        display: none;
+      }
+      &__list {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: flex;
+        &__li {
+          &:nth-child(1) {
+            .header-section__info-block__nav__list__li__link {
+              padding-left: 0;
+            }
+          }
+          &__link {
+            display: block;
+            padding: 1.25rem 1.5rem;
+            @include button_1;
+          }
+        }
+      }
+    }
+    &__contacts {
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+      &__phone-block {
+        position: relative;
+        margin-right: 1.75rem;
+        @include mobile {
+          display: none;
+        }
+        &:hover {
+          .header-section__info-block__contacts__phone-block__sub {
+            visibility: visible;
+            opacity: 1;
+          }
+        }
+        &__icon {
+          width: 2rem;
+          height: 2rem;
+          filter: invert(1);
+          img {
+            @include image_contain;
+          }
+        }
+        &__sub {
+          position: absolute;
+          padding-top: 3rem;
+          width: max-content;
+          right: -10rem;
+          visibility: hidden;
+          opacity: 0;
+          transition: all .3s;
+          &__list {
+            margin: 0;
+            padding: 1.25rem;
+            list-style: none;
+            background-color: $bg-primary;
+            @include df_fdc;
+            gap: 1.25rem;
+            &__li {
+              @include df_fdc;
+              gap: 0.5rem;
+              &__name {
+                @include description;
+              }
+              &__value {
+                @include button_2;
+                color: $text-accent;
+              }
+            }
+          }
+        }
+      }
+      &__button {
+        .button_outlined {
+          background-color: transparent;
+        }
+      }
+    }
+  }
+  .mob-menu {
+    position: absolute;
+    left: 0;
+    background-color: $bg-primary;
+    max-width: 39.375rem;
+    width: 100%;
+    visibility: hidden;
+    overflow: auto;
+    transform: translateX(-100%);
+    transition: all .3s;
+    &.open {
+      visibility: visible;
+      transform: translateX(0);
+    }
+    &__list {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      &__li {
+        &:not(:last-child) {
+          border-bottom: 0.125rem solid $border-primary-subdued-60;
+        }
+        &__link {
+          display: block;
+          padding: 1.5rem;
+          @include heading_3;
+          text-transform: uppercase;
+          color: $text-primary-transparent-40;
+          @include mobile {
+            padding: 3rem;
+          }
+        }
+      }
+    }
+    .header-section__info-block__contacts__phone-block__sub__list {
+      @include mobile {
+        padding: 3rem;
+        gap: 3rem;
+      }
+      &__li {
+        @include mobile {
+          gap: 1rem;
+        }
+        &__name {
+          @include text_1;
+        }
+        &__value {
+          @include heading_3;
+        }
+      }
+    }
+    &__button {
+      margin: 1.5rem;
+      background-color: transparent;
+    }
+  }
+}
